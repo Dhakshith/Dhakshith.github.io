@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="Favicon.png">
+	<meta charset="UTF-8">
+	<title>Minesweeper Game</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="Library/Game.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+		    $("body").on("contextmenu",function(e){
+		        return false;
+		    });
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.console.log = function() {
+			window.console.log = function() {
+				return false;
+			}
+		}
+	</script>
+
+	<script src="Library/p5.js"></script>
+    <script src="Library/p5.dom.js"></script>
+    <script src="Library/p5.sound.js"></script>
+
+	<script src="Library/Game.js"></script>
+	<script src="Library/Cell.js"></script>
+</body>
+</html>
