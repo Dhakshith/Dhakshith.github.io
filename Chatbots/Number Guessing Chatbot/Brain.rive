@@ -1,0 +1,12 @@
+! version = 2.0
+
++ secretly set the number to this integer #
+- <set num=<star>>
+
++ #
+* <star> >  <get num> => Pick A Lower Number
+* <star> == <get num> => You Got It !
+* <star> <  <get num> => Pick A Higher Number
+
++ * 
+- Guess A Number Between 1 And 20

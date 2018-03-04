@@ -1,0 +1,37 @@
+! version = 2.0
+! sub i'm = i am
+
+! array pokemons = charizard pikachu bulbasaur squirtle
+
++ i am _
+- <set name=<formal>>Nice To Meet You, <get name>
+- <set name=<formal>>Hello, <get name>
+
++ my pokemon is (@pokemons)
+- <set pokemon=<formal>>Oh, I Too Love <get pokemon> !
+
++ [*] hello [*]
+* <get name> == undefined => Hi, There !
+- Hello, <get name>.
+
++ [*] apple [*]
+- Oh, Let's Talk About Apples !
+
++ i like *
+- I Also Like <star> !
+
++ what is your favorite pokemon
+- My Favorite Pokemon is <get pokemon>
+
++ i dont like *
+- I Also Dont Like <star> !
+
++ (what is my name|who am i)
+* <get name> == undefined => You Did Not Tell It To Me !
+- You're <get name>, Right?
+
++ [*] can you listen me [*]
+- Yes, I Can Listen Me
+
++ *
+- I Prefer To Discuss Fruit.
