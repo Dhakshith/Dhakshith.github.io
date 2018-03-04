@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Drawing Tool",
+    "version": "0.1",
+    "content_scripts": [
+      	{
+    	    "matches": [
+    	     	"<all_urls>"
+    	    ],
+        	"js": [
+        		"Library/p5.js", 
+        		"Library/p5.dom.js", 
+        		"sketch.js"
+        	]
+      	}
+    ],
+    "browser_action": {
+        "default_icon": "032 Icon.png"
+    },
+    "icons": { 
+         "16": "016 Icon.png",
+         "32": "032 Icon.png",
+         "48": "048 Icon.png",
+        "128": "128 Icon.png"
+    }
+}
