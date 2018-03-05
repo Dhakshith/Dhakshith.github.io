@@ -4,7 +4,7 @@ var Drops = [];
 
 let Song;
 
-functio preload() {
+function preload() {
 	Song = loadSound('Space Invader.mp3');
 }
 
