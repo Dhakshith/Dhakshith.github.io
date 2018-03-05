@@ -2,6 +2,12 @@ var ship;
 var Flowers = [];
 var Drops = [];
 
+let Song;
+
+functio preload() {
+	Song = loadSound('Space Invader.mp3');
+}
+
 function setup() {
 	createCanvas(innerWidth, innerHeight);
 	ship = new Ship();
@@ -13,6 +19,9 @@ function setup() {
 
 function draw() {
 	background(0);
+
+	Song.play();
+
 	ship.show();
 	ship.move();
 
