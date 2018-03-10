@@ -38,9 +38,7 @@ class Matrix {
                }
 
                return this.map((e, i, j) => e + n.data[i][j]);
-          } else {
-               return this.map(e => e + n);
-          }
+          } else return this.map(e => e + n);
      }
 
      static transpose(matrix) {
