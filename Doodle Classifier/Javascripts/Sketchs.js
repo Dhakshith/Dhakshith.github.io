@@ -1,13 +1,12 @@
 let Size = 28, Length = Size * Size, Window = Size * 17.5, Training, Tresting, Net, Canv, Drawings = [
 	"Aeroplane",
-	"Train",
+	"Rainbow",
 	"Cat"
-], Planes = {}, Trains = {}, Cats = {}, Planeabel = 0, Trainabel = 1, Catabel = 2;
+], Planes = {}, Rainbows = {}, Cats = {}, Planeabel = 0, Rainabel = 1, Catabel = 2;
 
 function preload() {
 	Planes.Data = loadBytes("Data/1000 Planes.bin");
-	Trains.Data = loadBytes("Data/1000 Trains.bin");
-
+	Rainbows.Data = loadBytes("Data/1000 Rainbows.bin");
 	Cats.Data = loadBytes("Data/1000 Cats.bin");
 }
 
@@ -20,14 +19,13 @@ function setup() {
 	strokeWeight(20);
 
 	Prepare(Planes, Planeabel);
-	Prepare(Trains, Trainabel);
-
+	Prepare(Rainbows, Rainabel);
 	Prepare(Cats, Catabel);
 
 	Net = new NeuralNetwork(784, 64, 3);
 
-	Training = shuffle([].concat(Planes.Training).concat(Trains.Training).concat(Cats.Training));
-	Tresting = [].concat(Planes.Tresting).concat(Trains.Tresting).concat(Cats.Tresting);
+	Training = shuffle([].concat(Planes.Training).concat(Rainbows.Training).concat(Cats.Training));
+	Tresting = [].concat(Planes.Tresting).concat(Rainbows.Tresting).concat(Cats.Tresting);
 
 	let Epocounter = 0;
 
@@ -53,11 +51,7 @@ function setup() {
 		Img.resize(28, 28);
 		Img.loadPixels(  );
 
-		for (let i = 0; i < Length; i++) {
-			let Brightness = 255 - Img.pixels[i * 4];
-
-			Inputs[i] = Brightness / 255;
-		}
+		for (let i = 0; i < Length; i++) Inputs[i] = (255 - Img.pixels[i * 4]) / 255;
 
 		let Guesss = Net.predict(Inputs);
 		let Classs = Guesss.indexOf(max(Guesss));
