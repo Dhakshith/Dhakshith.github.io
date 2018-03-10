@@ -96,9 +96,7 @@ class Matrix {
      }
 
      static deserialize(data) {
-          if(typeof data == 'string') {
-               data = JSON.parse(data);
-          }
+          if(typeof data == 'string') data = JSON.parse(data);
 
           let matrix = new Matrix(data.rows, data.cols);
 
@@ -108,6 +106,4 @@ class Matrix {
      }
 }
 
-if (typeof module !== 'undefined') {
-     module.exports = Matrix;
-}
+if (typeof module !== 'undefined') module.exports = Matrix;
