@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Doodle Classifier</title>
+
+		<link rel="icon" href="https://Dhakshith.github.io/Favicon.png">
+
+		<style>
+			body {
+				overflow: hidden;
+				background-color: #555555;
+				text-align: center;
+				vertical-align: middle;
+			}
+
+			button {
+				font-size: 20pt;
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				background-color: white;
+				color: black;
+				transition-duration: 0.4s;
+				border: 5px solid black;
+			}
+
+			button:hover {
+				background-color: black;
+				color: white;
+			}
+
+			#Trest, #Guess, #Clear {
+				margin-left: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="https://Dhakshith.github.io/Toy Neural Network/Matrix.js"></script>
+		<script src="https://Dhakshith.github.io/Toy Neural Network/Neural.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
+
+		<script src="Javascripts/Sketchs.js"></script>
+		<script src="Javascripts/Bieters.js"></script>
+		<script src="Javascripts/Epoches.js"></script>
+		<script src="Javascripts/Prepare.js"></script>
+
+		<button id="Train">Train</button>
+		<button id="Trest">Test</button>
+		<button id="Guess">Guess</button>
+		<button id="Clear">Clear</button>
+	</body>
+</html>
