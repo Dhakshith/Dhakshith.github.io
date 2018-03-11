@@ -1,13 +1,13 @@
-let Size = 28, Length = Size * Size, Window = Size * 17.5, Training, Tresting, Net, Canv, Drawings = [
+let Size = 28, Length = Size * Size, Window = Size * 17.5, Training, Tresting, Clear, Drawings = [
 	"Aeroplane",
 	"Rainbow",
 	"Cat"
-], Planes = {}, Rainbows = {}, Cats = {}, Planeabel = 0, Rainabel = 1, Catabel = 2;
+], Net, Planes = {}, Rainbows = {}, Cats = {}, Epocounter = 0, Train, Trest, Guess, Canv, Erase, Write;
 
 function preload() {
-	Planes.Data = loadBytes("Data/1000 Planes.bin");
-	Rainbows.Data = loadBytes("Data/1000 Rainbows.bin");
-	Cats.Data = loadBytes("Data/1000 Cats.bin");
+	Planes.Data = loadBytes("Data/Planes.bin");
+	Rainbows.Data = loadBytes("Data/Rainbows.bin");
+	Cats.Data = loadBytes("Data/Cats.bin");
 }
 
 function setup() {
@@ -17,22 +17,24 @@ function setup() {
 
 	background(255);
 	strokeWeight(20);
+	stroke(0);
 
-	Prepare(Planes, Planeabel);
-	Prepare(Rainbows, Rainabel);
-	Prepare(Cats, Catabel);
+	Prepare(Planes,  0);
+	Prepare(Rainbows, 1);
+
+	Prepare(Cats, 2);
 
 	Net = new NeuralNetwork(784, 64, 3);
 
 	Training = shuffle([].concat(Planes.Training).concat(Rainbows.Training).concat(Cats.Training));
 	Tresting = [].concat(Planes.Tresting).concat(Rainbows.Tresting).concat(Cats.Tresting);
 
-	let Epocounter = 0;
-
-	let Train = select("#Train");
-	let Trest = select("#Trest");
-	let Guess = select("#Guess");
-	let Clear = select("#Clear");
+	Train = select("#Train");
+	Trest = select("#Trest");
+	Guess = select("#Guess");
+	Clear = select("#Clear");
+	Erase = select("#Erase");
+	Write = select("#Write");
 
 	Train.mousePressed(() => {
 		Epoch("Train", Training);
@@ -51,7 +53,11 @@ function setup() {
 		Img.resize(28, 28);
 		Img.loadPixels(  );
 
-		for (let i = 0; i < Length; i++) Inputs[i] = (255 - Img.pixels[i * 4]) / 255;
+		for (let i = 0; i < Length; i++) {
+			let Brightness = 255 - Img.pixels[i * 4];
+
+			Inputs[i] = Brightness / 255;
+		}
 
 		let Guesss = Net.predict(Inputs);
 		let Classs = Guesss.indexOf(max(Guesss));
@@ -59,7 +65,9 @@ function setup() {
 		console.log(Drawings[Classs]);
 	});
 
-	Clear.mousePressed(() => background(255))
+	Clear.mousePressed(() => background(255));
+	Write.mousePressed(() => stroke(0));
+	Erase.mousePressed(() => stroke(255));
 }
 
 function draw() {
