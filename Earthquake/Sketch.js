@@ -15,13 +15,11 @@ let Zoom = 1;
 let Clat = 0;
 let Clon = 0;
 
-let Lati = 11.0168;
-let Long = 76.9558;
-
 let Center;
-let Normal;
 
-let Sr = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.csv";
+let Color;
+
+let Sr = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv";
 
 function preload() {
 	W = min(windowWidth,  1280);
@@ -34,6 +32,8 @@ function preload() {
 }
 
 function Merca(lati, long) {
+	Color = color(255, 0, 0);
+
 	lati = radians(lati);
 	long = radians(long);
 
@@ -70,8 +70,8 @@ function setup() {
 
 		let Normal = p5.Vector.sub(Merca(Lat, Lon), Center);
 
-		stroke(255, 0, 255, 200);
-		fill(255, 0, 255, 200);
+		stroke(Color);
+		fill(Color);
 		ellipse(Normal.x, Normal.y, Diameter);
 	}
 }
