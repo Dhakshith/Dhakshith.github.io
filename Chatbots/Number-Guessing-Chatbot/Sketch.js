@@ -15,7 +15,7 @@ function setup() {
 	}
 
 	function StupidError(Err) {
-		console.log("Chatbot Error : " + Err);
+		console.log("Chatbot Error: " + Err);
 	}
 
 	let Button = select("#Submit");
