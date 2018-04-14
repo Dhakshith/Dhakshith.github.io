@@ -18,6 +18,7 @@ function setup() {
     canvas.position(0, 0);
     changeDirectionSound.playMode('restart');
     SNAKE = new Snake();
+    setVolume(0.1);
     frameRate(10);
     pickLocation();
 }
