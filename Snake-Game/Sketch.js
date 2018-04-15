@@ -8,9 +8,9 @@ var changeDirectionSound;
 var food;
 
 function preload() {
-    eatSound = loadSound("Sounds/Alert/Alert%20-%2006.mp3");
-    startOverSound = loadSound("Sounds/Voice/Male/Cartoon%20Laugh%20-%2001.mp3");
-    changeDirectionSound = loadSound("Sounds/Woosh/Woosh-Light-01.mp3");
+    eatSound = loadSound("Sounds/Eat.mp3");
+    startOverSound = loadSound("Sounds/Start.mp3");
+    changeDirectionSound = loadSound("Sounds/Turn.mp3");
 }
 
 function setup() {
