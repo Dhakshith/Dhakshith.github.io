@@ -22,7 +22,7 @@ var sketch = function(p) {
 	Canvas = p;
 
 	p.preload = function() {
-		MyImg = p.loadImage("Images/Player.png");
+		MyImg = p.loadImage("Player.png");
 	}
 
 	p.setup = function() {
