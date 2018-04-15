@@ -1,0 +1,92 @@
+* {
+	overflow: hidden;
+}
+
+body {
+	background-color: #000000;
+}
+
+.Spinner {
+	background-color: rgb(255, 255, 255);
+	border: none;
+	color: #000;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	margin: 4px 2px;
+	border-radius: 50%;
+	transform: translateX(1120px) translateY(-550px);
+	width: 100px;
+	height: 100px;
+	transition-duration: 0.4s;
+	border: 2px solid rgb(0, 255, 255);
+}
+
+.Spinner:focus {
+	outline: 0;
+}
+
+.Spinner:hover {
+    background-color: rgb(0, 255, 255);
+    color: #FFF;
+}
+
+p {
+	color: rgba(255, 255, 255, 1);
+	transform: translateX(1120px) translateY(-300px);
+	font-size: 30px;
+}
+
+.alert_success {
+    padding: 15px;
+    background-color: rgb(15, 254, 29);
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    width: 50%;
+    transform: translateX(764.5px) translateY(-958px);
+    overflow: hidden;
+    font-size: 30px;
+    height: 35px;
+}
+
+.inner {
+    display: inline;
+}
+
+.button {
+	border-radius: 30%;
+	background-color: #FFFFFF;
+	border: 2px solid rgb(0, 255, 255);
+	width: 175px;
+	height: 95%;
+	transform: translateX(50px) translateY(-5px);
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	display: inline;
+	transition-duration: 0.4s;
+	color: black;
+	font-size: 20px;
+}
+
+.button:focus {
+	outline: 0;
+}
+
+.button:hover {
+    background-color: rgb(0, 255, 255);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+	visibility: inherit;
+}
