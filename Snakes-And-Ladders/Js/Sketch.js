@@ -1,5 +1,4 @@
 let MyImg;
-let AiImg;
 
 let Resolution = 10;
 let Canvas;
@@ -24,7 +23,6 @@ var sketch = function(p) {
 
 	p.preload = function() {
 		MyImg = p.loadImage("Images/Player.png");
-		AiImg = p.loadImage("Images/Laptop.png");
 	}
 
 	p.setup = function() {
@@ -130,6 +128,4 @@ function Spin() {
 	}
 }
 
-function Replay() {
-	location.reload();
-}
+let Replay = location.reload;
