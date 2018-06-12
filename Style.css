@@ -1,7 +1,7 @@
-html {
+body {
 	margin: 0;
 	padding: 0;
-	background: #BFECF7;
+	animation: bgc infinite 20s;
 
 	min-width: 100%;
 	width: 100%;
@@ -10,16 +10,6 @@ html {
 	min-height: 100%;
 	height: 100%;
 	max-height: 100%;
-
-	box-shadow:
-		inset #19D4FF 0 0 0 5px,
-		inset #18CDF7 0 0 0 1px,
-		inset #53DFFF 0 0 0 10px,
-		inset #50D8F7 0 0 0 11px,
-		inset #8CE9FF 0 0 0 16px,
-		inset #88E2F7 0 0 0 17px,
-		inset #C5F4FF 0 0 0 22px,
-		inset #BFECF7 0 0 0 23px;
 }
 
 h1 {
@@ -73,4 +63,118 @@ div {
 	float: left;
 	width: 33%;
 	height: 100%;
+}
+
+@keyframes bgc {
+	0% {
+		background-color: #BFECF7;
+
+		box-shadow:
+			inset #19D4FF 0 0 0 5px,
+			inset #18CDF7 0 0 0 1px,
+			inset #53DFFF 0 0 0 10px,
+			inset #50D8F7 0 0 0 11px,
+			inset #8CE9FF 0 0 0 16px,
+			inset #88E2F7 0 0 0 17px,
+			inset #C5F4FF 0 0 0 22px,
+			inset #BFECF7 0 0 0 23px;
+	}
+
+	14% {
+		background-color: #C5F4FF;
+
+		box-shadow:
+			inset #BFECF7 0 0 0 5px,
+			inset #19D4FF 0 0 0 1px,
+			inset #18CDF7 0 0 0 10px,
+			inset #53DFFF 0 0 0 11px,
+			inset #50D8F7 0 0 0 16px,
+			inset #8CE9FF 0 0 0 17px,
+			inset #88E2F7 0 0 0 22px,
+			inset #C5F4FF 0 0 0 23px;
+	}
+
+	28% {
+		background-color: #88E2F7;
+
+		box-shadow:
+			inset #C5F4FF 0 0 0 5px,
+			inset #BFECF7 0 0 0 1px,
+			inset #19D4FF 0 0 0 10px,
+			inset #18CDF7 0 0 0 11px,
+			inset #53DFFF 0 0 0 16px,
+			inset #50D8F7 0 0 0 17px,
+			inset #8CE9FF 0 0 0 22px,
+			inset #88E2F7 0 0 0 23px;
+	}
+
+	43% {
+		background-color: #8CE9FF;
+
+		box-shadow:
+			inset #88E2F7 0 0 0 5px,
+			inset #C5F4FF 0 0 0 1px,
+			inset #BFECF7 0 0 0 10px,
+			inset #19D4FF 0 0 0 11px,
+			inset #18CDF7 0 0 0 16px,
+			inset #53DFFF 0 0 0 17px,
+			inset #50D8F7 0 0 0 22px,
+			inset #8CE9FF 0 0 0 23px;
+	}
+
+	57% {
+		background-color: #50D8F7;
+
+		box-shadow:
+			inset #8CE9FF 0 0 0 5px,
+			inset #88E2F7 0 0 0 1px,
+			inset #C5F4FF 0 0 0 10px,
+			inset #BFECF7 0 0 0 11px,
+			inset #19D4FF 0 0 0 16px,
+			inset #18CDF7 0 0 0 17px,
+			inset #53DFFF 0 0 0 22px,
+			inset #50D8F7 0 0 0 23px;
+	}
+
+	71% {
+		background-color: #53DFFF;
+
+		box-shadow:
+			inset #50D8F7 0 0 0 5px,
+			inset #8CE9FF 0 0 0 1px,
+			inset #88E2F7 0 0 0 10px,
+			inset #C5F4FF 0 0 0 11px,
+			inset #BFECF7 0 0 0 16px,
+			inset #19D4FF 0 0 0 17px,
+			inset #18CDF7 0 0 0 22px,
+			inset #53DFFF 0 0 0 23px;
+	}
+
+	85% {
+		background-color: #18CDF7;
+
+		box-shadow:
+			inset #53DFFF 0 0 0 5px,
+			inset #50D8F7 0 0 0 1px,
+			inset #8CE9FF 0 0 0 10px,
+			inset #88E2F7 0 0 0 11px,
+			inset #C5F4FF 0 0 0 16px,
+			inset #BFECF7 0 0 0 17px,
+			inset #19D4FF 0 0 0 22px,
+			inset #18CDF7 0 0 0 23px;
+	}
+
+	100% {
+		background-color: #19D4FF;
+
+		box-shadow:
+			inset #18CDF7 0 0 0 5px,
+			inset #53DFFF 0 0 0 1px,
+			inset #50D8F7 0 0 0 10px,
+			inset #8CE9FF 0 0 0 11px,
+			inset #88E2F7 0 0 0 16px,
+			inset #C5F4FF 0 0 0 17px,
+			inset #BFECF7 0 0 0 22px,
+			inset #19D4FF 0 0 0 23px;
+	}
 }
